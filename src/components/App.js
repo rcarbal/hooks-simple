@@ -2,12 +2,14 @@ import React, {  useState } from 'react';
 import ResourceList from './ResourceList';
 
 const App = () => {
-    const [resource, setResource ] = useState('post');
+
+    const [resource, setResource ] = useState('posts');
+    
         return (
             <div>
                 <div>
-                    <button onClick={()=> setResource('post')}>Post</button>
-                    <button onClick={()=> setResource('todo')}>Todo</button>
+                    <button onClick={()=> setResource('posts')}>Post</button>
+                    <button onClick={()=> setResource('todos')}>Todo</button>
                 </div>
                 <ResourceList resource={resource}/>
             </div>
